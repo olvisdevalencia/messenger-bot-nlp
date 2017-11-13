@@ -23,6 +23,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
     switch (intent) {
         // Greeting
         case 'greeting':
+        case 'greetings':
             reply([{text: `¡Hola ${sender.first_name}!`}]);
             break;
         // The bot didn't understand
