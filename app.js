@@ -53,7 +53,23 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                     }
                 ]}
             ]);*/
-        	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
+        	reply([
+        		{
+        			text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?',
+        			quick_replies: [
+                        {
+                            content_type: 'text',
+                            title: '¿ Saludos ?',
+                            payload: 'greeting'
+                        },
+                        {
+                            content_type: 'text',
+                            title: '#2',
+                            payload: 'probando'
+                        }
+        		},
+        	
+    		]);
             break;
     }
 
