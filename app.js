@@ -26,6 +26,9 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
         case 'greetings':
             reply([{text: `¡Hola ${sender.first_name}!`}]);
             break;
+        case 'probando':
+        	reply([{text:'Hola como estas , en que te puedo ayudar ?'}]);
+        	break;
         // The bot didn't understand
         case UNK:
             reply([
@@ -46,7 +49,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                     {
                         content_type: 'text',
                         title: '#2',
-                        payload: 'greetings'
+                        payload: 'probando'
                     }
                 ]}
             ]);
