@@ -36,7 +36,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                     }
                 },
                 {
-                    "No entiendo , esto que quieres decir " + text, 
+                	`¡Hola ${sender.first_name}!`, 
                     quick_replies: [
                     {
                         content_type: 'text',
