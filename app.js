@@ -19,13 +19,12 @@ const UNK = 'UNK';
  */
 const onMessage = ({sender, intent, entities, text, reply}) => {
 	
-	entities.shift();
     // Replace the code here
     switch (intent) {
         // Greeting
         case 'greeting':
         case 'greetings':
-            reply([{text: `${intent} ${entities}`}]);
+            reply([{text: `${entities[0]}`}]);
             break;
         case 'probando':
         	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
