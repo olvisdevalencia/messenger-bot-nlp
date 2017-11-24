@@ -24,7 +24,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
         // Greeting
         case 'greeting':
         case 'greetings':
-            reply([{text: `${entities} ${entities}`}]);
+            reply([{text: `${intent} ${entities}`}]);
             break;
         case 'probando':
         	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
