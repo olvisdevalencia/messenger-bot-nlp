@@ -36,7 +36,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                     }
                 },
                 {
-                    text, 
+                    "No entiendo , esto que quieres decir " + text, 
                     quick_replies: [
                     {
                         content_type: 'text',
