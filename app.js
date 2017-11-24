@@ -21,7 +21,15 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
 	
     // Replace the code here
 	console.log(entities);
-	var another = entities[Object.keys(entities)[0]];
+	var first = {};
+	var data = entities;
+	for(key in data){
+	    if(data.hasOwnProperty(key)){
+	    	another.key = key;
+	    	another.content =  data[key];
+	        break;
+	    }
+	}
     switch (intent) {
         // Greeting
         case 'greeting':
