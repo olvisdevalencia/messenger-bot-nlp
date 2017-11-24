@@ -27,7 +27,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
             reply([{text: `¡Hola ${sender.first_name}!`}]);
             break;
         case 'probando':
-        	reply([{text:'${sender.first_name} ${sender.last_name}: ${text}, en que te puedo ayudar ?'}]);
+        	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}: ${text}!`+', en que te puedo ayudar ?'}]);
         	break;
         // The bot didn't understand
         case UNK:
