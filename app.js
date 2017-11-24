@@ -36,17 +36,17 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                     }
                 },
                 {
-                	`¡Hola ${sender.first_name}!`, 
+                	text, 
                     quick_replies: [
                     {
                         content_type: 'text',
-                        title: '¿?',
-                        payload: 'SOME_INTENT'
+                        title: '¿ Saludos ?',
+                        payload: 'greeting'
                     },
                     {
                         content_type: 'text',
                         title: '#2',
-                        payload: 'SOME_OTHER_INTENT'
+                        payload: 'greetings'
                     }
                 ]}
             ]);
