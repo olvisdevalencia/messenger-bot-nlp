@@ -24,14 +24,14 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
         // Greeting
         case 'greeting':
         case 'greetings':
-            reply([{text: `¡Hola ${sender.first_name}!`}]);
+            reply([{text: `${entities} ${entities}`}]);
             break;
         case 'probando':
-        	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}: ${text}!`+', en que te puedo ayudar ?'}]);
+        	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
         	break;
         // The bot didn't understand
         case UNK:
-            reply([
+            /*reply([
                 {
                     attachment: {
                         type: 'image', 
@@ -52,7 +52,8 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
                         payload: 'probando'
                     }
                 ]}
-            ]);
+            ]);*/
+        	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
             break;
     }
 
