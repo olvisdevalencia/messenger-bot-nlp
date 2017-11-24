@@ -18,13 +18,14 @@ const UNK = 'UNK';
  * Docs: https://developers.facebook.com/docs/messenger-platform/send-messages
  */
 const onMessage = ({sender, intent, entities, text, reply}) => {
-    
+	
+	entities.shift();
     // Replace the code here
     switch (intent) {
         // Greeting
         case 'greeting':
         case 'greetings':
-            reply([{text: `${intent} ${entities.shift()}`}]);
+            reply([{text: `${intent} ${entities}`}]);
             break;
         case 'probando':
         	reply([{text:`¡Hola ${sender.first_name} ${sender.last_name}:`+', en que te puedo ayudar ?'}]);
