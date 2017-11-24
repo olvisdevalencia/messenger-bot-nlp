@@ -21,7 +21,7 @@ const onMessage = ({sender, intent, entities, text, reply}) => {
 	
     // Replace the code here
 	console.log(entities);
-	var another = entities[0].value;
+	var another = Object.values(entities);
     switch (intent) {
         // Greeting
         case 'greeting':
